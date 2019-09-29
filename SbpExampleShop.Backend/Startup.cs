@@ -31,6 +31,7 @@ namespace SbpExampleShop.Backend
             services.AddTransient<PaymentService>();
             services.AddHttpClient<IAkbarsSbpIntegration, AkbarsSbpIntegration>();
             services.AddTransient<IQrEncoder, QrEncoder>();
+            services.AddSingleton<PaymentStatusService>();
             services.Configure<AkbarsSbpIntegrationOptions>(_configuration.GetSection("AkbarsSbpIntegrationOptions"));
             services.AddMvc();
             services.AddCors(options =>
