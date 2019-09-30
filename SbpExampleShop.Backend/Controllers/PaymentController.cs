@@ -37,7 +37,7 @@ namespace SbpExampleShop.Backend.Controllers
             
             return new ActionResult<StatusResponse>( new StatusResponse
             {
-                Status = Status.Success//MapStatus(status)
+                Status = MapStatus(status)
             });
         }
 
